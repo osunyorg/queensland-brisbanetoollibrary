@@ -1,4 +1,5 @@
 # # You need to add PERCY_TOKEN in your repository's secrets to run tests
+# You need to add PERCY_TOKEN in your repository's secrets to run tests
 
 # name: Percy.io Visual Diff
 
@@ -30,7 +31,7 @@
 #         extended: true
 #     # build the site
 #     - name: Build
-#       run: npm install && hugo --minify
+#       run: npm install && hugo --minify -e development
 #     # run percy test
 #     - name: Use Node.js ${{ matrix.node-version }}
 #       uses: actions/setup-node@v2
@@ -42,4 +43,3 @@
 #     - run: percy snapshot ./public
 #       env:
 #         PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-    
